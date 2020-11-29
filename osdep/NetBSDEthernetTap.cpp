@@ -93,7 +93,7 @@ NetBSDEthernetTap::NetBSDEthernetTap(
 
 	// we can create /dev/tap*
 	std::vector<std::string> devFiles(OSUtils::listDirectory("/dev"));
-	for(int i=9993;i<(9993+128);++i) {
+	for(int i=43434;i<(43434+128);++i) {
 		Utils::snprintf(tmpdevname,sizeof(tmpdevname),"tap%d",i);
 		Utils::snprintf(devpath,sizeof(devpath),"/dev/%s",tmpdevname);
 		if (std::find(devFiles.begin(),devFiles.end(),std::string(tmpdevname)) == devFiles.end()) {

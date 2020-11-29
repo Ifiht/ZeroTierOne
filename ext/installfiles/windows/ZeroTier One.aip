@@ -14,7 +14,7 @@
     <ROW Property="ARPCOMMENTS" Value="This installer database contains the logic and data required to install [|ProductName]."/>
     <ROW Property="ARPCONTACT" Value="contact@zerotier.com"/>
     <ROW Property="ARPHELPLINK" Value="https://www.zerotier.com/"/>
-    <ROW Property="ARPHELPTELEPHONE" Value="949-505-9993"/>
+    <ROW Property="ARPHELPTELEPHONE" Value="949-505-43434"/>
     <ROW Property="ARPNOMODIFY" MultiBuildValue="DefaultBuild:1"/>
     <ROW Property="ARPNOREPAIR" Value="1" MultiBuildValue="ExeBuild:1"/>
     <ROW Property="ARPPRODUCTICON" Value="ZeroTierIcon.exe" Type="8"/>
@@ -147,8 +147,8 @@
     <ROW TimeStampUrl="http://timestamp.verisign.com/scripts/timstamp.dll" SignerDescription="ZeroTier One" DescriptionUrl="https://www.zerotier.com/" SignOptions="7" SignTool="5" UseSha256="1" KVTenantId="5300bf3b-0eff-4a5f-a63f-821e22ed1730" KVAppId="5f94d77e-b795-41fd-afe7-ec913b03c1d3" KVName="ZeroTier-CS" KVCertName="ZT-EV-CS" KVCertVersion="442c2d6f77874ff99eed4b36f5cb401c"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.FirewallExceptionComponent">
-    <ROW FirewallException="ZeroTierOneControl" DisplayName="ZeroTier One TCP/9993" GroupName="ZeroTierOne" Enabled="1" Scope="*" Condition="1" Profiles="7" Port="9993" Protocol="TCP"/>
-    <ROW FirewallException="ZeroTierOneUDP9993" DisplayName="ZeroTier One UDP/9993" GroupName="ZeroTierOne" Enabled="1" Scope="*" Condition="1" Profiles="7" Port="9993" Protocol="UDP"/>
+    <ROW FirewallException="ZeroTierOneControl" DisplayName="ZeroTier One TCP/43434" GroupName="ZeroTierOne" Enabled="1" Scope="*" Condition="1" Profiles="7" Port="43434" Protocol="TCP"/>
+    <ROW FirewallException="ZeroTierOneUDP43434" DisplayName="ZeroTier One UDP/43434" GroupName="ZeroTierOne" Enabled="1" Scope="*" Condition="1" Profiles="7" Port="43434" Protocol="UDP"/>
     <ROW FirewallException="ZeroTierOnex64Binary" DisplayName="ZeroTier One x64 Binary" Enabled="1" Scope="*" Condition="((?zerotierone_x64.exe=2) AND ($zerotierone_x64.exe=3))" Profiles="0" AppPath="[#zerotierone_x64.exe]" Port="*" Protocol="ANY"/>
     <ROW FirewallException="ZeroTierOnex86Binary" DisplayName="ZeroTier One x86 Binary" Enabled="1" Scope="*" Condition="((?zerotierone_x86.exe=2) AND ($zerotierone_x86.exe=3))" Profiles="0" AppPath="[#zerotierone_x86.exe]" Port="*" Protocol="ANY"/>
   </COMPONENT>

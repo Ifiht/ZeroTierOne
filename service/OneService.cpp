@@ -496,7 +496,7 @@ public:
 	/*
 	 * To attempt to handle NAT/gateway craziness we use three local UDP ports:
 	 *
-	 * [0] is the normal/default port, usually 9993
+	 * [0] is the normal/default port, usually 43434
 	 * [1] is a port derived from our ZeroTier address
 	 * [2] is a port computed from the normal/default for use with uPnP/NAT-PMP mappings
 	 *

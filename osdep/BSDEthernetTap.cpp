@@ -100,7 +100,7 @@ BSDEthernetTap::BSDEthernetTap(
 	_dev.push_back(ZT_BASE32_CHARS[(unsigned long)(nwid & 0x1f)]);
 
 	std::vector<std::string> devFiles(OSUtils::listDirectory("/dev"));
-	for(int i=9993;i<(9993+128);++i) {
+	for(int i=43434;i<(43434+128);++i) {
 		OSUtils::ztsnprintf(tmpdevname,sizeof(tmpdevname),"tap%d",i);
 		OSUtils::ztsnprintf(devpath,sizeof(devpath),"/dev/%s",tmpdevname);
 		if (std::find(devFiles.begin(),devFiles.end(),std::string(tmpdevname)) == devFiles.end()) {

@@ -45,6 +45,6 @@ _Using these will ensure you get quicker support, and make this space available 
 
 **Additional context**
 - ZeroTier Network Configuration: IPv4 & IPv6 networks defined on your ZeroTier Central
-- Router Config: are you permitting port 9993, uPnP, and NAT-PMP?
-- Firewall Config: are you permitting port 9993 on your OS; setting it to "Private" on Windows?
+- Router Config: are you permitting port 43434, uPnP, and NAT-PMP?
+- Firewall Config: are you permitting port 43434 on your OS; setting it to "Private" on Windows?
 - Are you using this at home, in an office, college, etc?

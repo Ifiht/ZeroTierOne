@@ -25,7 +25,7 @@ Settings available in `local.conf` (this is not valid JSON, and JSON does not al
 		}
 	},
 	"settings": { /* Other global settings */
-		"primaryPort": 1-65535, /* If set, override default port of 9993 and any command line port */
+		"primaryPort": 1-65535, /* If set, override default port of 43434 and any command line port */
 		"secondaryPort": 1-65535, /* If set, override default random secondary port */
 		"tertiaryPort": 1-65535, /* If set, override default random tertiary port */
 		"portMappingEnabled": true|false, /* If true (the default), try to use uPnP or NAT-PMP to map ports */
@@ -59,7 +59,7 @@ An example `local.conf`:
 	"virtual": {
 		"feedbeef12": {
 			"role": "UPSTREAM",
-			"try": [ "10.10.20.1/9993" ],
+			"try": [ "10.10.20.1/43434" ],
 			"blacklist": [ "192.168.0.0/24" ]
 		}
 	},

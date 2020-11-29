@@ -15,7 +15,7 @@ The **zerotier-one** service keeps its state and other files in a working direct
 
 Multiple instances of **zerotier-one** can be run on the same system as long as they are run with different primary ports (see switches) and a different working directory. But since a single service can join any number of networks, typically there's no point in doing this.
 
-The **zerotier-one** service is controlled via a JSON API available at 127.0.0.1:<primary port> with the default primary port being 9993. Access to this API requires an authorization token normally found in the authtoken.secret file in the service's working directory. On some platforms access may be guarded by other measures such as socket peer UID/GID lookup if additional security options are enabled (this is not the default).
+The **zerotier-one** service is controlled via a JSON API available at 127.0.0.1:<primary port> with the default primary port being 43434. Access to this API requires an authorization token normally found in the authtoken.secret file in the service's working directory. On some platforms access may be guarded by other measures such as socket peer UID/GID lookup if additional security options are enabled (this is not the default).
 
 The first time the service is started in a fresh working directory, it generates a ZeroTier identity. On slow systems this process can take ten seconds or more due to an anti-DDOS/anti-counterfeit proof of work function used by ZeroTier in address generation. This only happens once, and once generated the result is saved in identity.secret in the working directory. This file represents and defines/claims your ZeroTier address and associated ECC-256 key pair.
 
@@ -31,7 +31,7 @@ The first time the service is started in a fresh working directory, it generates
    Skip privilege check and allow to be run by non-privileged user. This is typically used when **zerotier-one** is built with the network controller option included. In this case the ZeroTier service might only be acting as a network controller and might never actually join networks, in which case it does not require elevated system permissions.
 
  * `-p<port>`:
-   Specify a different primary port. If this is not given the default is 9993. If zero is given a random port is chosen each time.
+   Specify a different primary port. If this is not given the default is 43434. If zero is given a random port is chosen each time.
 
  * `-d`:
    Fork and run as a daemon.

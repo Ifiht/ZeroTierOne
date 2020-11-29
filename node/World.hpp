@@ -31,7 +31,7 @@
  * of one root or its withdrawal due to compromise without taking the whole net
  * down.
  */
-#define ZT_WORLD_MAX_ROOTS 4
+#define ZT_WORLD_MAX_ROOTS 1
 
 /**
  * Maximum number of stable endpoints per root (sanity limit, okay to increase)
@@ -56,6 +56,11 @@
  * World ID for Mars -- for future use by SpaceX or others
  */
 #define ZT_WORLD_ID_MARS 227883110
+
+/**
+ * World ID for Eris -- personal use only
+ */
+#define ZT_WORLD_ID_ERIS 1015231000
 
 namespace ZeroTier {
 
@@ -85,7 +90,7 @@ public:
 	enum Type
 	{
 		TYPE_NULL = 0,
-		TYPE_PLANET = 1, // Planets, of which there is currently one (Earth)
+		TYPE_PLANET = 1, // Planets, of which there is now one (Eris)
 		TYPE_MOON = 127  // Moons, which are user-created and many
 	};
 

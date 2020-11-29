@@ -326,7 +326,7 @@ static int cli(int argc,char **argv)
 		const unsigned int scode = Http::GET(1024 * 1024 * 16,60000,(const struct sockaddr *)&addr,"/status",requestHeaders,responseHeaders,responseBody);
 
 		if (scode == 0) {
-			printf("Error connecting to the ZeroTier service: %s\n\nPlease check that the service is running and that TCP port 9993 can be contacted via 127.0.0.1." ZT_EOL_S, responseBody.c_str());
+			printf("Error connecting to the ZeroTier service: %s\n\nPlease check that the service is running and that TCP port 43434 can be contacted via 127.0.0.1." ZT_EOL_S, responseBody.c_str());
 			return 1;
 		}
 
@@ -361,7 +361,7 @@ static int cli(int argc,char **argv)
 		const unsigned int scode = Http::GET(1024 * 1024 * 16,60000,(const struct sockaddr *)&addr,"/peer",requestHeaders,responseHeaders,responseBody);
 
 		if (scode == 0) {
-			printf("Error connecting to the ZeroTier service: %s\n\nPlease check that the service is running and that TCP port 9993 can be contacted via 127.0.0.1." ZT_EOL_S, responseBody.c_str());
+			printf("Error connecting to the ZeroTier service: %s\n\nPlease check that the service is running and that TCP port 43434 can be contacted via 127.0.0.1." ZT_EOL_S, responseBody.c_str());
 			return 1;
 		}
 
@@ -428,7 +428,7 @@ static int cli(int argc,char **argv)
 		const unsigned int scode = Http::GET(1024 * 1024 * 16,60000,(const struct sockaddr *)&addr,"/peer",requestHeaders,responseHeaders,responseBody);
 
 		if (scode == 0) {
-			printf("Error connecting to the ZeroTier service: %s\n\nPlease check that the service is running and that TCP port 9993 can be contacted via 127.0.0.1." ZT_EOL_S, responseBody.c_str());
+			printf("Error connecting to the ZeroTier service: %s\n\nPlease check that the service is running and that TCP port 43434 can be contacted via 127.0.0.1." ZT_EOL_S, responseBody.c_str());
 			return 1;
 		}
 
@@ -502,7 +502,7 @@ static int cli(int argc,char **argv)
 			fprintf(stderr, "zerotier-cli bond list\n");
 			const unsigned int scode = Http::GET(1024 * 1024 * 16,60000,(const struct sockaddr *)&addr,"/bonds",requestHeaders,responseHeaders,responseBody);
 			if (scode == 0) {
-				printf("Error connecting to the ZeroTier service: %s\n\nPlease check that the service is running and that TCP port 9993 can be contacted via 127.0.0.1." ZT_EOL_S, responseBody.c_str());
+				printf("Error connecting to the ZeroTier service: %s\n\nPlease check that the service is running and that TCP port 43434 can be contacted via 127.0.0.1." ZT_EOL_S, responseBody.c_str());
 				return 1;
 			}
 			nlohmann::json j;
@@ -601,7 +601,7 @@ static int cli(int argc,char **argv)
 					responseHeaders,
 					responseBody);
 				if (scode == 0) {
-					printf("Error connecting to the ZeroTier service: %s\n\nPlease check that the service is running and that TCP port 9993 can be contacted via 127.0.0.1." ZT_EOL_S, responseBody.c_str());
+					printf("Error connecting to the ZeroTier service: %s\n\nPlease check that the service is running and that TCP port 43434 can be contacted via 127.0.0.1." ZT_EOL_S, responseBody.c_str());
 					return 1;
 				}
 				nlohmann::json j;
@@ -680,14 +680,14 @@ static int cli(int argc,char **argv)
 		return 2;
 		const unsigned int scode = Http::GET(1024 * 1024 * 16,60000,(const struct sockaddr *)&addr,"/bonds",requestHeaders,responseHeaders,responseBody);
 		if (scode == 0) {
-			printf("Error connecting to the ZeroTier service: %s\n\nPlease check that the service is running and that TCP port 9993 can be contacted via 127.0.0.1." ZT_EOL_S, responseBody.c_str());
+			printf("Error connecting to the ZeroTier service: %s\n\nPlease check that the service is running and that TCP port 43434 can be contacted via 127.0.0.1." ZT_EOL_S, responseBody.c_str());
 			return 1;
 		}
 	} else if (command == "listbonds") {
 		const unsigned int scode = Http::GET(1024 * 1024 * 16,60000,(const struct sockaddr *)&addr,"/bonds",requestHeaders,responseHeaders,responseBody);
 
 		if (scode == 0) {
-			printf("Error connecting to the ZeroTier service: %s\n\nPlease check that the service is running and that TCP port 9993 can be contacted via 127.0.0.1." ZT_EOL_S, responseBody.c_str());
+			printf("Error connecting to the ZeroTier service: %s\n\nPlease check that the service is running and that TCP port 43434 can be contacted via 127.0.0.1." ZT_EOL_S, responseBody.c_str());
 			return 1;
 		}
 
@@ -753,7 +753,7 @@ static int cli(int argc,char **argv)
 		const unsigned int scode = Http::GET(1024 * 1024 * 16,60000,(const struct sockaddr *)&addr,"/network",requestHeaders,responseHeaders,responseBody);
 
 		if (scode == 0) {
-			printf("Error connecting to the ZeroTier service: %s\n\nPlease check that the service is running and that TCP port 9993 can be contacted via 127.0.0.1." ZT_EOL_S, responseBody.c_str());
+			printf("Error connecting to the ZeroTier service: %s\n\nPlease check that the service is running and that TCP port 43434 can be contacted via 127.0.0.1." ZT_EOL_S, responseBody.c_str());
 			return 1;
 		}
 
@@ -862,7 +862,7 @@ static int cli(int argc,char **argv)
 		const unsigned int scode = Http::GET(1024 * 1024 * 16,60000,(const struct sockaddr *)&addr,"/moon",requestHeaders,responseHeaders,responseBody);
 
 		if (scode == 0) {
-			printf("Error connecting to the ZeroTier service: %s\n\nPlease check that the service is running and that TCP port 9993 can be contacted via 127.0.0.1." ZT_EOL_S, responseBody.c_str());
+			printf("Error connecting to the ZeroTier service: %s\n\nPlease check that the service is running and that TCP port 43434 can be contacted via 127.0.0.1." ZT_EOL_S, responseBody.c_str());
 			return 1;
 		}
 
@@ -985,7 +985,7 @@ static int cli(int argc,char **argv)
 		}
 		const unsigned int scode = Http::GET(1024 * 1024 * 16,60000,(const struct sockaddr *)&addr,"/network",requestHeaders,responseHeaders,responseBody);
 		if (scode == 0) {
-			printf("Error connecting to the ZeroTier service: %s\n\nPlease check that the service is running and that TCP port 9993 can be contacted via 127.0.0.1." ZT_EOL_S, responseBody.c_str());
+			printf("Error connecting to the ZeroTier service: %s\n\nPlease check that the service is running and that TCP port 43434 can be contacted via 127.0.0.1." ZT_EOL_S, responseBody.c_str());
 			return 1;
 		}
 		nlohmann::json j;
@@ -1086,7 +1086,7 @@ static int cli(int argc,char **argv)
 		dump << "status" << ZT_EOL_S << "------" << ZT_EOL_S;
 		unsigned int scode = Http::GET(1024 * 1024 * 16,60000,(const struct sockaddr *)&addr,"/status",requestHeaders,responseHeaders,responseBody);
 		if (scode != 200) {
-			printf("Error connecting to the ZeroTier service: %s\n\nPlease check that the service is running and that TCP port 9993 can be contacted via 127.0.0.1." ZT_EOL_S, responseBody.c_str());
+			printf("Error connecting to the ZeroTier service: %s\n\nPlease check that the service is running and that TCP port 43434 can be contacted via 127.0.0.1." ZT_EOL_S, responseBody.c_str());
 			return 1;
 		}
 		dump << responseBody << ZT_EOL_S;
@@ -1098,7 +1098,7 @@ static int cli(int argc,char **argv)
 		dump << ZT_EOL_S << "networks" << ZT_EOL_S << "--------" << ZT_EOL_S;
 		scode = Http::GET(1024 * 1024 * 16,60000,(const struct sockaddr *)&addr,"/network",requestHeaders,responseHeaders,responseBody);
 		if (scode != 200) {
-			printf("Error connecting to the ZeroTier service: %s\n\nPlease check that the service is running and that TCP port 9993 can be contacted via 127.0.0.1." ZT_EOL_S, responseBody.c_str());
+			printf("Error connecting to the ZeroTier service: %s\n\nPlease check that the service is running and that TCP port 43434 can be contacted via 127.0.0.1." ZT_EOL_S, responseBody.c_str());
 			return 1;
 		}
 		dump << responseBody << ZT_EOL_S;
@@ -1110,7 +1110,7 @@ static int cli(int argc,char **argv)
 		dump << ZT_EOL_S << "peers" << ZT_EOL_S << "-----" << ZT_EOL_S;
 		scode = Http::GET(1024 * 1024 * 16,60000,(const struct sockaddr *)&addr,"/peer",requestHeaders,responseHeaders,responseBody);
 		if (scode != 200) {
-			printf("Error connecting to the ZeroTier service: %s\n\nPlease check that the service is running and that TCP port 9993 can be contacted via 127.0.0.1." ZT_EOL_S, responseBody.c_str());
+			printf("Error connecting to the ZeroTier service: %s\n\nPlease check that the service is running and that TCP port 43434 can be contacted via 127.0.0.1." ZT_EOL_S, responseBody.c_str());
 			return 1;
 		}
 		dump << responseBody << ZT_EOL_S;
@@ -1119,7 +1119,7 @@ static int cli(int argc,char **argv)
 		dump << ZT_EOL_S << "bonds" << ZT_EOL_S << "-----" << ZT_EOL_S;
 		scode = Http::GET(1024 * 1024 * 16,60000,(const struct sockaddr *)&addr,"/bonds",requestHeaders,responseHeaders,responseBody);
 		if (scode != 200) {
-			printf("Error connecting to the ZeroTier service: %s\n\nPlease check that the service is running and that TCP port 9993 can be contacted via 127.0.0.1." ZT_EOL_S, responseBody.c_str());
+			printf("Error connecting to the ZeroTier service: %s\n\nPlease check that the service is running and that TCP port 43434 can be contacted via 127.0.0.1." ZT_EOL_S, responseBody.c_str());
 			return 1;
 		}
 		dump << responseBody << ZT_EOL_S;
@@ -1999,7 +1999,7 @@ static void printHelp(const char *cn,FILE *out)
 	fprintf(out,"  -h                - Display this help" ZT_EOL_S);
 	fprintf(out,"  -v                - Show version" ZT_EOL_S);
 	fprintf(out,"  -U                - Skip privilege check and do not attempt to drop privileges" ZT_EOL_S);
-	fprintf(out,"  -p<port>          - Port for UDP and TCP/HTTP (default: 9993, 0 for random)" ZT_EOL_S);
+	fprintf(out,"  -p<port>          - Port for UDP and TCP/HTTP (default: 43434, 0 for random)" ZT_EOL_S);
 
 #ifdef __UNIX_LIKE__
 	fprintf(out,"  -d                - Fork and run as daemon (Unix-ish OSes)" ZT_EOL_S);

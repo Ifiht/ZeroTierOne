@@ -675,9 +675,9 @@ static int testOther()
 	}
 
 	std::cout << "[other] Testing InetAddress encode/decode..."; std::cout.flush();
-	std::cout << " " << InetAddress("127.0.0.1/9993").toString(buf);
+	std::cout << " " << InetAddress("127.0.0.1/43434").toString(buf);
 	std::cout << " " << InetAddress("feed:dead:babe:dead:beef:f00d:1234:5678/12345").toString(buf);
-	std::cout << " " << InetAddress("0/9993").toString(buf);
+	std::cout << " " << InetAddress("0/43434").toString(buf);
 	std::cout << " " << InetAddress("").toString(buf);
 	std::cout << std::endl;
 

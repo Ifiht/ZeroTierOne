@@ -60,7 +60,7 @@ ln -s $ZT_IDENTITY_PATH/identity.public identity.public
 ln -s $ZT_IDENTITY_PATH/identity.secret identity.secret
 popd
 
-DEFAULT_PORT=9993
+DEFAULT_PORT=43434
 
 echo "{
     \"settings\": {

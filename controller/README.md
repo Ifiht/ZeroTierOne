@@ -17,7 +17,7 @@ Since ZeroTier nodes are mobile and do not need static IPs, implementing high av
 
 ### Dockerizing Controllers
 
-ZeroTier network controllers can easily be run in Docker or other container systems. Since containers do not need to actually join networks, extra privilege options like "--device=/dev/net/tun --privileged" are not needed. You'll just need to map the local JSON API port of the running controller and allow it to access the Internet (over UDP/9993 at a minimum) so things can reach and query it.
+ZeroTier network controllers can easily be run in Docker or other container systems. Since containers do not need to actually join networks, extra privilege options like "--device=/dev/net/tun --privileged" are not needed. You'll just need to map the local JSON API port of the running controller and allow it to access the Internet (over UDP/43434 at a minimum) so things can reach and query it.
 
 ### PostgreSQL Database Implementation
 
@@ -35,7 +35,7 @@ The migration tool is written in nodeJS and can be used like this:
 
 ### Network Controller API
 
-The controller API is hosted via the same JSON API endpoint that ZeroTier One uses for local control (usually at 127.0.0.1 port 9993). All controller options are routed under the `/controller` base path.
+The controller API is hosted via the same JSON API endpoint that ZeroTier One uses for local control (usually at 127.0.0.1 port 43434). All controller options are routed under the `/controller` base path.
 
 The controller microservice itself does not implement any fine-grained access control. Access control is via the ZeroTier control interface itself and `authtoken.secret`. This can be sent as the `X-ZT1-Auth` HTTP header field or appended to the URL as `?auth=<token>`. Take care when doing the latter that request URLs are not being logged.
 
@@ -75,7 +75,7 @@ When POSTing new networks take care that their IDs are not in use, otherwise you
 
 Example:
 
-`curl -X POST --header "X-ZT1-Auth: secret" -d '{"name":"my network"}' http://localhost:9993/controller/network/305f406058______`
+`curl -X POST --header "X-ZT1-Auth: secret" -d '{"name":"my network"}' http://localhost:43434/controller/network/305f406058______`
 
 **Network object format:**
 

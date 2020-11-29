@@ -14,8 +14,8 @@ FROM debian:buster-slim
 LABEL version="1.4.4"
 LABEL description="Containerized ZeroTier One for use on CoreOS or other Docker-only Linux hosts."
 
-# ZeroTier relies on UDP port 9993
-EXPOSE 9993/udp
+# ZeroTier relies on UDP port 43434
+EXPOSE 43434/udp
 
 RUN mkdir -p /var/lib/zerotier-one
 COPY --from=builder /usr/sbin/zerotier-cli /usr/sbin/zerotier-cli

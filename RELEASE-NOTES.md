@@ -226,7 +226,7 @@ Version 1.2.0 is now aware of the link quality of direct paths with other 1.2.0 
 
 This information is visible from the command line via `listpeers`:
 
-    200 listpeers XXXXXXXXXX 199.XXX.XXX.XXX/9993;10574;15250;1.00 48 1.2.0 LEAF
+    200 listpeers XXXXXXXXXX 199.XXX.XXX.XXX/43434;10574;15250;1.00 48 1.2.0 LEAF
     200 listpeers XXXXXXXXXX 195.XXX.XXX.XXX/45584;467;7608;0.44 290 1.2.0 LEAF
 
 The first peer's path is at 100% (1.00), while the second peer's path is suffering quite a bit of packet loss (0.44).
@@ -274,7 +274,7 @@ If you have data in an old SQLite3 controller we've included a NodeJS script in 
 
  * **The Windows HyperV 100% CPU bug is FINALLY DEAD**: This long-running problem turns out to have been an issue with Windows itself, but one we were triggering by placing invalid data into the Windows registry. Microsoft is aware of the issue but we've also fixed the triggering problem on our side. ZeroTier should now co-exist quite well with HyperV and should now be able to be bridged with a HyperV virtual switch.
  * **Segmentation faults on musl-libc based Linux systems**: Alpine Linux and some embedded Linux systems that use musl libc (a minimal libc) experienced segmentation faults. These were due to a smaller default stack size. A work-around that sets the stack size for new threads has been added.
- * **Windows firewall blocks local JSON API**: On some Windows systems the firewall likes to block 127.0.0.1:9993 for mysterious reasons. This is now fixed in the installer via the addition of another firewall exemption rule.
+ * **Windows firewall blocks local JSON API**: On some Windows systems the firewall likes to block 127.0.0.1:43434 for mysterious reasons. This is now fixed in the installer via the addition of another firewall exemption rule.
  * **UI crash on embedded Windows due to missing fonts**: The MSI installer now ships fonts and will install them if they are not present, so this should be fixed.
 
 ## Other Improvements in 1.2.0
