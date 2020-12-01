@@ -60,7 +60,7 @@
 /**
  * World ID for Eris -- personal use only
  */
-#define ZT_WORLD_ID_ERIS 1015231000
+#define ZT_WORLD_ID_ERIS 101523100
 
 namespace ZeroTier {
 
